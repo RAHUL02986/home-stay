@@ -89,7 +89,7 @@ Add the same variable to your hosting provider's server environment and restart 
 
 The site publishes page metadata, social-sharing cards, `robots.txt`, and a sitemap at `/sitemap.xml`. The sitemap includes approved property listings and the Dharamshala destination pages; unpublished listings and account/admin routes are excluded.
 
-Before deploying, set `SITE_URL` to the canonical public origin (for example, `https://your-real-domain.com`, with no path or trailing route). Vercel deployments can use `VERCEL_PROJECT_PRODUCTION_URL` as a fallback, but setting `SITE_URL` is recommended so canonical links and the sitemap use your actual custom domain. Do not use the localhost URL in production.
+Before deploying, set `SITE_URL` to the canonical public origin (for example, `https://your-real-domain.com`, with no path or trailing route). Vercel deployment host variables are supported as a fallback, but setting `SITE_URL` is recommended so canonical links and the sitemap use your actual custom domain. Non-Vercel production builds require `SITE_URL`; production URLs must use HTTPS. Do not use the localhost URL in production.
 
 After deployment, verify `https://your-real-domain.com/robots.txt` and `https://your-real-domain.com/sitemap.xml`, create a Google Search Console property for the domain, complete ownership verification, and submit the sitemap. Search indexing and ranking are controlled by Google and are not immediate or guaranteed. Keep listing descriptions, prices, locations, and photos accurate and up to date.
 
